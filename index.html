@@ -9,7 +9,9 @@
 
     <!-- Le styles -->
     <link href="index_files/bootstrap.css" rel="stylesheet">
-    <link href="index_files/bootstrap-responsive.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+     <link href="index_files/bootstrap-responsive.css" rel="stylesheet">
 
   <link href="jquery.terminal.css" rel="stylesheet"/>
    <link rel="stylesheet" href="jquery-ui.css" />
@@ -22,6 +24,8 @@
   <script src="jquery.mousewheel-min.js"></script>
   <script src="jquery.terminal-0.7.7.js"></script>
   <script type="text/javascript" src="jquery.jstree.js"></script>
+
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     
   <style>
 body {
@@ -228,9 +232,13 @@ jQuery(document).ready(function($) {
         <div class="span4 offset1 "><h3>Code Editor</h3></div>
         <div class="span5 offset1"><h3>Terminal</h3></div></div> 
        
-     
+     <div class="row-fluid"><button type="button" class="btn btn-default btn-small" id="clickme">
+  <span class=".glyphicon .glyphicon-list"></span> Click
+</button>
+<br/> 
+</div>
       <div class="row-fluid span12">
-        <div class="span2">
+        <div class="span2" id="toggle">
       <div id="treeView"></div></div>
         <div class="span5 ">
 
@@ -247,6 +255,11 @@ jQuery(document).ready(function($) {
     <div id="tilda"></div>
         </div>
       </div>
+      <script>
+$( document.getElementById("clickme") ).click(function() {
+$( "#toggle" ).toggle( "slide" );
+});
+</script>
     
       
     <!-- /container -->
